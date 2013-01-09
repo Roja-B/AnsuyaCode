@@ -1,0 +1,297 @@
+pdf("PostsperThreadFreq.pdf")
+p_postsperthread<- plot(h_postsperthread$counts, log="xy", type='h', lwd="5", lend=2, col="brown2", xlab="log(No. of Posts)", ylab="log(No. of Threads)")
+lines(h_postsperthread$counts, log="xy",type='l', col="lightgrey", lwd=2)
+dev.off()
+pdf("PostsperUserFreq.pdf")
+p_postsperuser<- plot(h_postsperuser$counts, log="xy", type='h', lwd="5", lend=2, col="cadetblue", xlab="log(No. of Posts)", ylab="log(No. of Users)")
+lines(h_postsperuser$counts, log="xy",type='l', col="lightgrey", lwd=2)
+dev.off()
+
+pdf("user_Frequency.pdf")
+h_users<- hist(ndates_users, "months", format="%Y-%m-%d", freq=TRUE, border=FALSE, ylab=" No. of Users", xlab="Date", main=NULL)
+polygon.freq(h_users, col="cadetblue", lwd=1.5)
+dev.off()
+pdf("posts_Timeline.pdf")
+h_posts<- hist( ndates, "weeks", format="%Y-%m-%d", freq=TRUE, border=FALSE, ylab=" No. of Posts", xlab="Date", main=NULL)
+polygon.freq(h_posts,col="coral3", lwd=1.5)
+dev.off()
+
+topic histograms
+
+topic0 <- read.table( "topic0.txt", header=TRUE)
+ndates0 <- as.Date(topic0$date, "%Y-%m-%d")
+png("topic0_timeline_hist_months.png")
+h_t0_1<-hist(ndates0,"months", format="%Y-%m-%d",freq=TRUE, col="darkred",border="white", main="Religion", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic1 <- read.table( "topic1.txt", header=TRUE)
+ndates1 <- as.Date(topic1$date, "%Y-%m-%d")
+png("topic1_timeline_hist_months.png")
+h_t1_1<-hist(ndates1,"months", format="%Y-%m-%d",freq=TRUE, col="darkred",border="white", main="Love & Fun", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic2 <- read.table( "topic2.txt", header=TRUE)
+ndates2 <- as.Date(topic2$date, "%Y-%m-%d")
+png("topic2_timeline_hist_months.png")
+h_t2_1<-hist(ndates2,"months", format="%Y-%m-%d",freq=TRUE, col="darkred",border="white", main="Day to Day", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic3 <- read.table( "topic3.txt", header=TRUE)
+ndates3 <- as.Date(topic3$date, "%Y-%m-%d")
+png("topic3_timeline_hist_months.png")
+h_t3_1<-hist(ndates3,"months", format="%Y-%m-%d",freq=TRUE, col="cadetblue",border="white", main="Vaccination", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic4 <- read.table( "topic4.txt", header=TRUE)
+ndates4 <- as.Date(topic4$date, "%Y-%m-%d")
+png("topic4_timeline_hist_months.png")
+h_t4_1<-hist(ndates4,"months", format="%Y-%m-%d",freq=TRUE, col="darkred",border="white", main="Family", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic5 <- read.table( "topic5.txt", header=TRUE)
+ndates5 <- as.Date(topic5$date, "%Y-%m-%d")
+png("topic5_timeline_hist_months.png")
+h_t5_1<-hist(ndates5,"months", format="%Y-%m-%d",freq=TRUE, col="cadetblue",border="white", main="Birth & Hospitals", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic6 <- read.table( "topic6.txt", header=TRUE)
+ndates6 <- as.Date(topic6$date, "%Y-%m-%d")
+png("topic6_timeline_hist_months.png")
+h_t6_1<-hist(ndates6,"months", format="%Y-%m-%d",freq=TRUE, col="cadetblue",border="white", main="Food", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic7 <- read.table( "topic7.txt", header=TRUE)
+ndates7 <- as.Date(topic7$date, "%Y-%m-%d")
+png("topic7_timeline_hist_months.png")
+h_t7_1<-hist(ndates7,"months", format="%Y-%m-%d",freq=TRUE, col="cadetblue",border="white", main="Money & Work", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic8 <- read.table( "topic8.txt", header=TRUE)
+ndates8 <- as.Date(topic8$date, "%Y-%m-%d")
+png("topic8_timeline_hist_months.png")
+h_t8_1<-hist(ndates8,"months", format="%Y-%m-%d",freq=TRUE, col="cadetblue",border="white", main="Government", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+topic9 <- read.table( "topic9.txt", header=TRUE)
+ndates9 <- as.Date(topic9$date, "%Y-%m-%d")
+png("topic9_timeline_hist_months.png")
+h_t9_1<-hist(ndates9,"months", format="%Y-%m-%d",freq=TRUE, col="darkred",border="white", main="Autism", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1)
+axis(2, col="black")
+dev.off()
+
+png("topic9_timeline_hist_weeks.png")
+h_t9_1<-hist(ndates9,"weeks", format="%Y-%m-%d",freq=TRUE, col="blue",
+border="black", main="Topic 9", ylab="No. of Posts", xlab="Date")
+dev.off()
+
+topic strength
+
+topics<-read.table("AvgTopicStrength1.txt",header=TRUE);
+dates<-c("2007-02-06","2007-08-06","2008-02-06","2008-08-06","2009-02-06","2009-08-06","2010-02-06","2010-08-06","2011-02-06","2011-08-06","2012-02-06");
+plot_colors<-c("darkred","brown3","coral4","darkolivegreen4","coral3","darkcyan","darkblue","azure4","cyan3","darkorange3");
+max_y<-max(topics);
+png("topic_Timeline1.png");
+par(xpd=T, mar=par()$mar+c(0,0,0,4))#par(xpd=T, mar=c(5,4,4,8)+0.1);#mar=c(10,6,4,6)+0.1);
+plot(topics$topic2, type="o",pch=23, lty=3, col=plot_colors[3], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);#F);
+#text(1:11, par("usr")[3] - 0.25, srt=45, adj=1,labels=dates,xpd=T);
+#mtext(1,text="Date",line=9);
+lines(topics$topic0, type="o", col=plot_colors[1])
+lines(topics$topic1, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+lines(topics$topic4, type="o",pch=25, lty=1, col=plot_colors[5]);
+lines(topics$topic9, type="o", pch=21, lty=2, col=plot_colors[10]);
+legend(12, max_y, paste("topic",c(0,1,2,4,9),""), cex=0.8, col=c(plot_colors[1],plot_colors[2],plot_colors[3],plot_colors[5],plot_colors[10]), pch=c(21,22,23,25,21), lty=c(1,2,3,1,2),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+png("topic_Timeline2.png");
+par(xpd=T, mar=par()$mar+c(0,0,0,4))#par(xpd=T, mar=c(5,4,4,8)+0.1);#mar=c(10,6,4,6)+0.1);
+plot(topics$topic3, type="o",pch=24, lty=4, col=plot_colors[4], lwd=1.5, ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);#F);
+#text(1:11, par("usr")[3] - 0.25, srt=45, adj=1,labels=dates,xpd=T);
+#mtext(1,text="Date",line=9);
+lines(topics$topic7, type="o", pch=23, lty=4, col=plot_colors[8], lwd=1.5);
+lines(topics$topic5, type="o", lty=2, col=plot_colors[6]);
+lines(topics$topic6, type="o", pch=22, lty=3, col=plot_colors[7], lwd=1.5);
+lines(topics$topic8, type="o", pch=24, lty=1, col=plot_colors[9]);
+legend(12, max_y, paste("topic",c(3,5,6,7,8),""), cex=0.8, col=c(plot_colors[4],plot_colors[6],plot_colors[7],plot_colors[8],plot_colors[9]), pch=c(24,21,22,23,24), lty=c(4,2,3,4,1),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+
+sub-topic strength
+
+dates<-c("2007-02-06","2007-08-06","2008-02-06","2008-08-06","2009-02-06","2009-08-06","2010-02-06","2010-08-06","2011-02-06","2011-08-06","2012-02-06");
+plot_colors<-c("darkred","brown3","coral4","darkolivegreen4","coral3","darkcyan","darkblue","azure4","cyan3","darkorange3");
+
+subtopics0<-read.table("AvgTopicStrengthtopic0.txt",header=TRUE);
+max_y<-max(subtopics0);
+pdf("subtopic_Timeline0.pdf");
+par(xpd=T, mar=par()$mar+c(0,0,0,4))#par(xpd=T, mar=c(5,4,4,8)+0.1);#mar=c(10,6,4,6)+0.1);
+plot(subtopics0$topic0, type="o",pch=23, lty=3, col=plot_colors[3], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);#F);
+#text(1:11, par("usr")[3] - 0.25, srt=45, adj=1,labels=dates,xpd=T);
+#mtext(1,text="Date",line=9);
+lines(subtopics0$topic1, type="o", col=plot_colors[1])
+lines(subtopics0$topic2, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+lines(subtopics0$topic3, type="o",pch=25, lty=1, col=plot_colors[5]);
+lines(subtopics0$topic4, type="o", pch=21, lty=2, col=plot_colors[10]);
+legend(12, max_y, paste("topic",c(0,1,2,3,4),""), cex=0.8, col=c(plot_colors[3],plot_colors[1],plot_colors[2],plot_colors[5],plot_colors[10]), pch=c(23,21,22,25,21), lty=c(3,1,2,1,2),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+subtopics3<-read.table("AvgTopicStrengthtopic3.txt",header=TRUE);
+max_y<-max(subtopics3);
+pdf("subtopic_Timeline3.pdf");
+par(mfrow=c(2,1),xpd=T, mar=par()$mar+c(0,0,0,4));
+plot(subtopics3$topic0, type="o",pch=23, lty=3, col=plot_colors[1], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics3$topic1, type="o", col=plot_colors[2])
+lines(subtopics3$topic2, type="o",pch=22, lty=2, col=plot_colors[3], lwd=1.5);
+legend(12, max_y, paste("topic",c(0,1,2),""), cex=0.8, col=c(plot_colors[1],plot_colors[2],plot_colors[3]), pch=c(23,21,22), lty=c(3,1,2),bty="n");
+plot(subtopics3$topic3, type="o",pch=25, lty=1, col=plot_colors[6], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics3$topic4, type="o", pch=21, lty=2, col=plot_colors[9]);
+legend(12, max_y, paste("topic",c(3,4),""), cex=0.8, col=c(plot_colors[6],plot_colors[9]), pch=c(25,21), lty=c(1,2),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+subtopics7<-read.table("AvgTopicStrengthtopic7.txt",header=TRUE);
+max_y<-max(subtopics7);
+pdf("subtopic_Timeline7.pdf");
+par(mfrow=c(2,1), xpd=T, mar=par()$mar+c(0,0,0,4));
+plot(subtopics7$topic3, type="o",pch=25, lty=1, col=plot_colors[2], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics7$topic4, type="o", pch=21, lty=2, col=plot_colors[3]);
+legend(12, max_y, paste("topic",c(3,4),""), cex=0.8, col=c(plot_colors[2],plot_colors[3]), pch=c(25,21), lty=c(1,2),bty="n");
+plot(subtopics7$topic0, type="o",pch=23, lty=3, col=plot_colors[6], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics7$topic1, type="o", col=plot_colors[7])
+lines(subtopics7$topic2, type="o",pch=22, lty=2, col=plot_colors[9], lwd=1.5);
+legend(12, max_y, paste("topic",c(0,1,2),""), cex=0.8, col=c(plot_colors[6],plot_colors[7],plot_colors[9]), pch=c(23,21,22), lty=c(3,1,2),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+subtopics8<-read.table("AvgTopicStrengthtopic8.txt",header=TRUE);
+max_y<-max(subtopics8);
+pdf("subtopic_Timeline8.pdf");
+par(mfrow=c(2,1), xpd=T, mar=par()$mar+c(0,0,0,4));
+plot(subtopics8$topic2, type="o",pch=25, lty=1, col=plot_colors[1], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics8$topic3, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+lines(subtopics8$topic4, type="o", pch=21, lty=3, col=plot_colors[3]);
+legend(12, max_y, paste("topic",c(2,3,4),""), cex=0.8, col=c(plot_colors[1],plot_colors[2], plot_colors[3]), pch=c(25,22,21), lty=c(1,2,3),bty="n");
+plot(subtopics8$topic0, type="o",pch=23, lty=3, col=plot_colors[6], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics8$topic1, type="o", col=plot_colors[9])
+legend(12, max_y, paste("topic",c(0,1),""), cex=0.8, col=c(plot_colors[6],plot_colors[9]), pch=c(23,21), lty=c(3,1),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+subtopics9<-read.table("AvgTopicStrengthtopic9.txt",header=TRUE);
+max_y<-max(subtopics9);
+pdf("subtopic_Timeline9.pdf");
+par(mfrow=c(2,1), xpd=T, mar=par()$mar+c(0,0,0,4));
+plot(subtopics9$topic4, type="o",pch=25, lty=3, col=plot_colors[3], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics9$topic3, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+legend(12, max_y, paste("topic",c(3,4),""), cex=0.8, col=c(plot_colors[3], plot_colors[2]), pch=c(25,22), lty=c(3,2),bty="n");
+plot(subtopics9$topic0, type="o",pch=23, lty=3, col=plot_colors[6], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics9$topic1, type="o", col=plot_colors[9])
+lines(subtopics9$topic2, type="o", pch=22, lty=2, col=plot_colors[7]);
+legend(12, max_y, paste("topic",c(0,1,2),""), cex=0.8, col=c(plot_colors[6],plot_colors[9], plot_colors[7]), pch=c(23,21,22), lty=c(3,1,2),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+subtopics5<-read.table("AvgTopicStrengthtopic5.txt",header=TRUE);
+max_y<-max(subtopics5);
+pdf("subtopic_Timeline5.pdf");
+par(mfrow=c(2,1), xpd=T, mar=par()$mar+c(0,0,0,4));
+plot(subtopics5$topic0, type="o",pch=25, lty=3, col=plot_colors[3], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics5$topic4, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+legend(12, max_y, paste("topic",c(0,4),""), cex=0.8, col=c(plot_colors[3], plot_colors[2]), pch=c(25,22), lty=c(3,2),bty="n");
+plot(subtopics5$topic3, type="o",pch=23, lty=3, col=plot_colors[6], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics5$topic1, type="o", col=plot_colors[9])
+lines(subtopics5$topic2, type="o", pch=22, lty=2, col=plot_colors[7]);
+legend(12, max_y, paste("topic",c(1,2,3),""), cex=0.8, col=c(plot_colors[9], plot_colors[7],plot_colors[6]), pch=c(21,22,23), lty=c(1,2,3),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+subtopics1<-read.table("AvgTopicStrengthtopic1.txt",header=TRUE);
+max_y<-max(subtopics1);
+pdf("subtopic_Timeline1.pdf");
+par(mfrow=c(2,1), xpd=T, mar=par()$mar+c(0,0,0,4));
+plot(subtopics1$topic1, type="o",pch=25, lty=3, col=plot_colors[3], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics1$topic2, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+legend(12, max_y, paste("topic",c(1,2),""), cex=0.8, col=c(plot_colors[3], plot_colors[2]), pch=c(25,22), lty=c(3,2),bty="n");
+plot(subtopics1$topic0, type="o",pch=23, lty=3, col=plot_colors[6], ylim=c(0,max_y), xlab="Date",ylab="Topic Strength", xaxt="n");
+axis(1,at=1:11,labels=dates);
+lines(subtopics1$topic3, type="o", col=plot_colors[9])
+lines(subtopics1$topic4, type="o", pch=22, lty=2, col=plot_colors[7]);
+legend(12, max_y, paste("topic",c(0,3,4),""), cex=0.8, col=c(plot_colors[9], plot_colors[7],plot_colors[6]), pch=c(21,22,23), lty=c(1,2,3),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+
+Community
+
+png("community0.png")
+community=0 # choose a community
+dels = (0:(vcount(G)-1))[memberships$membership != community]; # going to remove all nodes that are not in this community
+ng0 = delete.vertices(G, dels) # isolate the community
+ng0 = set.graph.attribute(ng0, "layout", layout.fruchterman.reingold(ng0)); # specify the layout
+plot(ng0, vertex.label="", vertex.size=2, vertex.color="darkred") # plot the community
+dev.off()
+png("community1.png")
+community=1 # choose a community
+dels = (0:(vcount(G)-1))[memberships$membership != community]; # going to remove all nodes that are not in this community
+ng1 = delete.vertices(G, dels) # isolate the community
+ng1 = set.graph.attribute(ng1, "layout", layout.fruchterman.reingold(ng1)); # specify the layout
+plot(ng1, vertex.label="", vertex.size=2, vertex.color="darkred") # plot the community
+dev.off()
+png("community2.png")
+community=2 # choose a community
+dels = (0:(vcount(G)-1))[memberships$membership != community]; # going to remove all nodes that are not in this community
+ng2 = delete.vertices(G, dels) # isolate the community
+ng2 = set.graph.attribute(ng2, "layout", layout.fruchterman.reingold(ng2)); # specify the layout
+plot(ng2, vertex.label="", vertex.size=2, vertex.color="darkred") # plot the community
+dev.off()
+png("community3.png")
+community=3 # choose a community
+dels = (0:(vcount(G)-1))[memberships$membership != community]; # going to remove all nodes that are not in this community
+ng3 = delete.vertices(G, dels) # isolate the community
+ng3 = set.graph.attribute(ng3, "layout", layout.fruchterman.reingold(ng3)); # specify the layout
+plot(ng3, vertex.label="", vertex.size=2, vertex.color="darkred") # plot the community
+dev.off()
+png("community5.png")
+community=5 # choose a community
+dels = (0:(vcount(G)-1))[memberships$membership != community]; # going to remove all nodes that are not in this community
+ng5 = delete.vertices(G, dels) # isolate the community
+ng5 = set.graph.attribute(ng5, "layout", layout.fruchterman.reingold(ng5)); # specify the layout
+plot(ng5, vertex.label="", vertex.size=2, vertex.color="darkred") # plot the community
+dev.off()
+
+Topic COmmunity
+png("Topic_Community.png")
+com<- c("Community 0","Community 1","Community 2","Community 3","Community 5")
+par(xpd=T, mar=par()$mar+c(0,0,0,6))
+plot(topics_comm0$community0, ylab="Relevant Topic Score", xlab="Topic", col=plot_colors[2], type="o", xaxt="n", ylim=c(-0.6,0.5))
+axis(1:10, at=1:10, labels=0:9)
+lines(topics_comm1$community1, type="o", col=plot_colors[3])
+topics_comm2<- read.table("topic_community2.txt",header=TRUE) 
+lines(topics_comm2$community2, type="o", col=plot_colors[5])
+topics_comm3<- read.table("topic_community3.txt",header=TRUE) 
+lines(topics_comm3$community3, type="o", col=plot_colors[6])
+topics_comm5<- read.table("topic_community5.txt",header=TRUE) 
+lines(topics_comm5$community5, type="o", col=plot_colors[8])
+legend(11, 0.5, com, cex=0.8, col=c(plot_colors[2],plot_colors[3],plot_colors[5],plot_colors[6],plot_colors[8]), 
+pch=c(21,21,21,21,21), lty=c(1,1,1,1,1),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+
+
+

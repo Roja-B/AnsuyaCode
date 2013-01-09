@@ -1,0 +1,49 @@
+Total No. of Posts- 1,700,086
+Total No. of Posts with more than 10 words - 1,518,490 from 138,244 threads
+
+Total No. of Users- 27790 in the user table and 27792 in the post table
+On an average a user posted 5 posts
+Top 3 users with maximum number of posts are:
+userId      posts       userBadge
+1603999     16222       Member
+484990      19189       Animal Crackers
+855504      17261       None
+
+Number of users who posted >10,000 are 14 i.e. 0.05%
+Number of users whose posted >1000 are 310 i.e. 1.1%
+Number of users who posted >500 and <=1000 are 219 i.e. 0.8%
+Number of users who posted >100 and <=500 are 1412 i.e. 5%
+Number of users who posted >20 and <=100 are 3891 i.e. 14%
+Number of users who posted >1 and <=20 are 14528 i.e. 52.3%
+Number of users who posted only 1 post are 7430 i.e. 26.7%
+
+Number of users who have friends- 21,113 out of which 16,731 had atleast one friend in the users table i.e. 60% of the users have friends effectively.
+Also every user from the 21,113 user has atleast one friend which is not present in the users table. That data is stored in /media/netdisk/cafemomfriendsexclude.txt
+
+User friends is stored in /media/netdisk/cafemomfriendsinclude.txt
+E.g of user,friends and post->  userId:79053 friends:6293 post:1 
+
+Total No. of Threads- 139457 in post table and 139517 in the thread table
+Average Thread length ( number of posts in a thread ) - 12.1909289735
+Total No. of threads with thread length >=100 are 1556 i.e. 1%
+Total No. of threads with 100> thread length >=50 are 3743 i.e. 2.7%
+Total No. of threads with 50> thread length >=20 are 15387 i.e. 11%
+Total No. of threads with 20> thread length >=10 are 25705 i.e. 18.4%
+Total No. of threads with 10> thread length >=5 are 33558 i.e. 24.1%
+Total No. of threads with 5> thread length >=1 are 59506 i.e. 42.7%
+
+Topic modeling on 138244 threads gives: max top proportion- 0.9623738146222086 min topic proportion- 0.10526315789473684 
+and average topic proportion is 0.368658238474
+
+Posts divided into 11 time slots of 6 month period each starting from Feb 6th 2007 to April 24th 2012
+Slot 1 has 75836 posts 
+Slot 2 has 137579 posts
+Slot 3 has 192522 posts
+Slot 4 has 216261 posts
+Slot 5 has 215045 posts
+Slot 6 has 194930 posts
+SLot 7 has 208310 posts
+Slot 8 has 167595 posts
+Slot 9 has 172292 posts
+Slot 10 has 96500 posts
+Slot 11 has 23216 posts - for ~3 month period

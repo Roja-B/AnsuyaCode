@@ -1,0 +1,23 @@
+This is code one can use to group by an field and count different values for that field. In the example below, every post record has a threadId. I wanted to count the number of times each threadId occurred in different posts. In other words, I am calculating how many posts are there in each thread.
+
+db.runCommand({
+mapReduce: "posts",
+map:function(){
+emit({threadId : threadId},{recs:1})
+},
+reduce: function(keys,vals){
+var ret={recs:0};
+for(var i=0; i<vals.length; i++){
+ret.recs+=[i].recs;
+}
+return ret;
+},
+out: 'postperthread',
+verbose:true
+});
+
+db.postperthread.find();
+
+Once again the above method of mapReduce is used for large databases. One can also use the more straightforward method below if your collection has less than 10000 unique keys
+
+db.posts.group({ key: {'threadId': true}, initial: {sum=0}, reduce: function(doc,prev) {prdId': true}, initial: {sum=0}, reduce: function(doc,prev) {prev.sum+=1}}); 

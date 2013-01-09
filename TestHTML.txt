@@ -1,0 +1,31 @@
+<html>
+<head>
+<title> blah blah blah </title>
+</head>
+<body>
+<p><b><br/> Whatever     !!!  </p></b><br/> very annoying<strong/> BLOB <style>
+ekfjdv
+fvkfnb
+fdbflbkm
+</style>
+<!-- jdfbjkgv<p>COMMENT TEXT -->
+HELLOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+<p>HEY YAAAAAAA!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+<script>
+DONT PRINT THIS
+<p><b> Kindly   work </b></p> hbfjrehbg;}
+hfm.galleryData = new Array();
+hfm.galleryData["slides"]=[
+	
+	{"caption":"Getty Images",description:"<p><b>Singapore</b></p><p>James Bent of 		<a href=\042http://lamodeoutre.com/\042 target=\042_blank\042 rel=\047nofollow\047>La Mode Outré</a>&nbsp;snaps through the Southeast Asian city-state that boasts sophisticated, easy fashion worn with the ultimate sense of style.</p><a href=\042http://www.elle.com/Fashion/Street-Chic/Global-Street-Chic2\042><img src=\042http://downloads.hfmus.com/elle/images/backtocity.jpg\042 width=\042120\042 height=\04217\042border=\0420\042 style=\042margin-top:20px;\042 /></a>",hed:""},	
+	{"caption":"James Bent/La Mode Outré",description:"<p><b>Singapore</b></p><p><b>Who:</b>&nbsp;Yusrina</p><p><b>What: </b>Wide-leg pants are the style du jour this season. Pair them with a cool sleeveless tee for an effortless outfit.</p><p><b>Wear: </b>Topshop shirt and pants, rings from Bangkok and Australia, Jeffrey Campbell shoes</p>&nbsp;<a href=\042http://www.elle.com/Fashion/Street-Chic/Global-Street-Chic2\042><img src=\042http://downloads.hfmus.com/elle/images/backtocity.jpg\042 width=\042120\042 height=\04217\042border=\0420\042 style=\042margin-top:20px;\042 /></a>",hed:""},	
+	{"caption":"James Bent/La Mode Outré",description:"<p><b>Singapore</b></p><p><b>Who:</b>&nbsp;Melody</p><p><b>What:</b>&nbsp;Wear leather this spring in refined separates like high-waist shorts or chic ankle boots.</p><p><b>Wear:</b>&nbsp;Monki shirt and shoes, Scarlet Room shorts, bag from local boutique, Forever 21 jewelry</p>&nbsp;<a href=\042http://www.elle.com/Fashion/Street-Chic/Global-Street-Chic2\042><img src=\042http://downloads.hfmus.com/elle/images/backtocity.jpg\042 width=\042120\042 height=\04217\042border=\0420\042 style=\042margin-top:20px;\042 /></a>",hed:""},	
+	];
+</script>
+<p> ANOTHER SCRIPT TAG
+<script>
+<br/> Hello World !!!!!
+{rdhgjhhjj;}
+</script>
+</body>
+</html>

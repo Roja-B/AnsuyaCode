@@ -1,0 +1,180 @@
+Oldest date 2007-03-02
+Youngest date 2012-04-23
+11 [(datetime.date(2007, 3, 2), datetime.date(2007, 9, 2)), (datetime.date(2007, 9, 2), datetime.date(2008, 3, 2)), (datetime.date(2008, 3, 2), datetime.date(2008, 9, 2)), (datetime.date(2008, 9, 2), datetime.date(2009, 3, 2)), (datetime.date(2009, 3, 2), datetime.date(2009, 9, 2)), (datetime.date(2009, 9, 2), datetime.date(2010, 3, 2)), (datetime.date(2010, 3, 2), datetime.date(2010, 9, 2)), (datetime.date(2010, 9, 2), datetime.date(2011, 3, 2)), (datetime.date(2011, 3, 2), datetime.date(2011, 9, 2)), (datetime.date(2011, 9, 2), datetime.date(2012, 3, 2)), (datetime.date(2012, 3, 2), datetime.date(2012, 9, 2))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 17270
+Total number of unique unigrams in this slot 35343
+Total number of unique unigrams in this slot 54006
+Total number of unique unigrams in this slot 69858
+Total number of unique unigrams in this slot 67385
+Total number of unique unigrams in this slot 57008
+Total number of unique unigrams in this slot 18400
+Total number of unique unigrams in this slot 17245
+Total number of unique unigrams in this slot 14188
+Total number of unique unigrams in this slot 15287
+Total number of unique unigrams in this slot 9265
+Slots 11
+Total number of unique unigrams in the entire corpus 171968
+Total unigrams added to different slots 375255
+Oldest date 2007-03-16
+Youngest date 2012-04-23
+11 [(datetime.date(2007, 3, 16), datetime.date(2007, 9, 16)), (datetime.date(2007, 9, 16), datetime.date(2008, 3, 16)), (datetime.date(2008, 3, 16), datetime.date(2008, 9, 16)), (datetime.date(2008, 9, 16), datetime.date(2009, 3, 16)), (datetime.date(2009, 3, 16), datetime.date(2009, 9, 16)), (datetime.date(2009, 9, 16), datetime.date(2010, 3, 16)), (datetime.date(2010, 3, 16), datetime.date(2010, 9, 16)), (datetime.date(2010, 9, 16), datetime.date(2011, 3, 16)), (datetime.date(2011, 3, 16), datetime.date(2011, 9, 16)), (datetime.date(2011, 9, 16), datetime.date(2012, 3, 16)), (datetime.date(2012, 3, 16), datetime.date(2012, 9, 16))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 4905
+Total number of unique unigrams in this slot 9189
+Total number of unique unigrams in this slot 19532
+Total number of unique unigrams in this slot 30031
+Total number of unique unigrams in this slot 32882
+Total number of unique unigrams in this slot 35392
+Total number of unique unigrams in this slot 32836
+Total number of unique unigrams in this slot 35318
+Total number of unique unigrams in this slot 33848
+Total number of unique unigrams in this slot 20756
+Total number of unique unigrams in this slot 3747
+Slots 11
+Total number of unique unigrams in the entire corpus 95865
+Total unigrams added to different slots 258436
+Oldest date 2007-03-01
+Youngest date 2012-04-23
+11 [(datetime.date(2007, 3, 1), datetime.date(2007, 9, 1)), (datetime.date(2007, 9, 1), datetime.date(2008, 3, 1)), (datetime.date(2008, 3, 1), datetime.date(2008, 9, 1)), (datetime.date(2008, 9, 1), datetime.date(2009, 3, 1)), (datetime.date(2009, 3, 1), datetime.date(2009, 9, 1)), (datetime.date(2009, 9, 1), datetime.date(2010, 3, 1)), (datetime.date(2010, 3, 1), datetime.date(2010, 9, 1)), (datetime.date(2010, 9, 1), datetime.date(2011, 3, 1)), (datetime.date(2011, 3, 1), datetime.date(2011, 9, 1)), (datetime.date(2011, 9, 1), datetime.date(2012, 3, 1)), (datetime.date(2012, 3, 1), datetime.date(2012, 9, 1))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 4192
+Total number of unique unigrams in this slot 9799
+Total number of unique unigrams in this slot 22916
+Total number of unique unigrams in this slot 42829
+Total number of unique unigrams in this slot 41633
+Total number of unique unigrams in this slot 38187
+Total number of unique unigrams in this slot 36297
+Total number of unique unigrams in this slot 27883
+Total number of unique unigrams in this slot 24447
+Total number of unique unigrams in this slot 18846
+Total number of unique unigrams in this slot 8479
+Slots 11
+Total number of unique unigrams in the entire corpus 104981
+Total unigrams added to different slots 275508
+Oldest date 2007-02-06
+Youngest date 2012-04-24
+11 [(datetime.date(2007, 2, 6), datetime.date(2007, 8, 6)), (datetime.date(2007, 8, 6), datetime.date(2008, 2, 6)), (datetime.date(2008, 2, 6), datetime.date(2008, 8, 6)), (datetime.date(2008, 8, 6), datetime.date(2009, 2, 6)), (datetime.date(2009, 2, 6), datetime.date(2009, 8, 6)), (datetime.date(2009, 8, 6), datetime.date(2010, 2, 6)), (datetime.date(2010, 2, 6), datetime.date(2010, 8, 6)), (datetime.date(2010, 8, 6), datetime.date(2011, 2, 6)), (datetime.date(2011, 2, 6), datetime.date(2011, 8, 6)), (datetime.date(2011, 8, 6), datetime.date(2012, 2, 6)), (datetime.date(2012, 2, 6), datetime.date(2012, 8, 6))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 34504
+Total number of unique unigrams in this slot 42595
+Total number of unique unigrams in this slot 37906
+Total number of unique unigrams in this slot 31526
+Total number of unique unigrams in this slot 23193
+Total number of unique unigrams in this slot 19102
+Total number of unique unigrams in this slot 17918
+Total number of unique unigrams in this slot 16557
+Total number of unique unigrams in this slot 14153
+Total number of unique unigrams in this slot 11029
+Total number of unique unigrams in this slot 6340
+Slots 11
+Total number of unique unigrams in the entire corpus 94478
+Total unigrams added to different slots 254823
+Oldest date 2007-02-14
+Youngest date 2012-04-23
+11 [(datetime.date(2007, 2, 14), datetime.date(2007, 8, 14)), (datetime.date(2007, 8, 14), datetime.date(2008, 2, 14)), (datetime.date(2008, 2, 14), datetime.date(2008, 8, 14)), (datetime.date(2008, 8, 14), datetime.date(2009, 2, 14)), (datetime.date(2009, 2, 14), datetime.date(2009, 8, 14)), (datetime.date(2009, 8, 14), datetime.date(2010, 2, 14)), (datetime.date(2010, 2, 14), datetime.date(2010, 8, 14)), (datetime.date(2010, 8, 14), datetime.date(2011, 2, 14)), (datetime.date(2011, 2, 14), datetime.date(2011, 8, 14)), (datetime.date(2011, 8, 14), datetime.date(2012, 2, 14)), (datetime.date(2012, 2, 14), datetime.date(2012, 8, 14))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 10773
+Total number of unique unigrams in this slot 21512
+Total number of unique unigrams in this slot 30257
+Total number of unique unigrams in this slot 32062
+Total number of unique unigrams in this slot 26576
+Total number of unique unigrams in this slot 27179
+Total number of unique unigrams in this slot 26971
+Total number of unique unigrams in this slot 34832
+Total number of unique unigrams in this slot 27346
+Total number of unique unigrams in this slot 15853
+Total number of unique unigrams in this slot 6664
+Slots 11
+Total number of unique unigrams in the entire corpus 101612
+Total unigrams added to different slots 260025
+Oldest date 2007-02-22
+Youngest date 2012-04-23
+11 [(datetime.date(2007, 2, 22), datetime.date(2007, 8, 22)), (datetime.date(2007, 8, 22), datetime.date(2008, 2, 22)), (datetime.date(2008, 2, 22), datetime.date(2008, 8, 22)), (datetime.date(2008, 8, 22), datetime.date(2009, 2, 22)), (datetime.date(2009, 2, 22), datetime.date(2009, 8, 22)), (datetime.date(2009, 8, 22), datetime.date(2010, 2, 22)), (datetime.date(2010, 2, 22), datetime.date(2010, 8, 22)), (datetime.date(2010, 8, 22), datetime.date(2011, 2, 22)), (datetime.date(2011, 2, 22), datetime.date(2011, 8, 22)), (datetime.date(2011, 8, 22), datetime.date(2012, 2, 22)), (datetime.date(2012, 2, 22), datetime.date(2012, 8, 22))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 3692
+Total number of unique unigrams in this slot 7109
+Total number of unique unigrams in this slot 18830
+Total number of unique unigrams in this slot 23817
+Total number of unique unigrams in this slot 18725
+Total number of unique unigrams in this slot 18621
+Total number of unique unigrams in this slot 16855
+Total number of unique unigrams in this slot 12467
+Total number of unique unigrams in this slot 15643
+Total number of unique unigrams in this slot 11349
+Total number of unique unigrams in this slot 4832
+Slots 11
+Total number of unique unigrams in the entire corpus 59858
+Total unigrams added to different slots 151940
+Oldest date 2007-02-19
+Youngest date 2012-04-23
+11 [(datetime.date(2007, 2, 19), datetime.date(2007, 8, 19)), (datetime.date(2007, 8, 19), datetime.date(2008, 2, 19)), (datetime.date(2008, 2, 19), datetime.date(2008, 8, 19)), (datetime.date(2008, 8, 19), datetime.date(2009, 2, 19)), (datetime.date(2009, 2, 19), datetime.date(2009, 8, 19)), (datetime.date(2009, 8, 19), datetime.date(2010, 2, 19)), (datetime.date(2010, 2, 19), datetime.date(2010, 8, 19)), (datetime.date(2010, 8, 19), datetime.date(2011, 2, 19)), (datetime.date(2011, 2, 19), datetime.date(2011, 8, 19)), (datetime.date(2011, 8, 19), datetime.date(2012, 2, 19)), (datetime.date(2012, 2, 19), datetime.date(2012, 8, 19))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 9850
+Total number of unique unigrams in this slot 23774
+Total number of unique unigrams in this slot 36385
+Total number of unique unigrams in this slot 49085
+Total number of unique unigrams in this slot 45398
+Total number of unique unigrams in this slot 38300
+Total number of unique unigrams in this slot 39826
+Total number of unique unigrams in this slot 33686
+Total number of unique unigrams in this slot 30421
+Total number of unique unigrams in this slot 21787
+Total number of unique unigrams in this slot 7814
+Slots 11
+Total number of unique unigrams in the entire corpus 142055
+Total unigrams added to different slots 336326
+Oldest date 2007-02-13
+Youngest date 2012-04-21
+11 [(datetime.date(2007, 2, 13), datetime.date(2007, 8, 13)), (datetime.date(2007, 8, 13), datetime.date(2008, 2, 13)), (datetime.date(2008, 2, 13), datetime.date(2008, 8, 13)), (datetime.date(2008, 8, 13), datetime.date(2009, 2, 13)), (datetime.date(2009, 2, 13), datetime.date(2009, 8, 13)), (datetime.date(2009, 8, 13), datetime.date(2010, 2, 13)), (datetime.date(2010, 2, 13), datetime.date(2010, 8, 13)), (datetime.date(2010, 8, 13), datetime.date(2011, 2, 13)), (datetime.date(2011, 2, 13), datetime.date(2011, 8, 13)), (datetime.date(2011, 8, 13), datetime.date(2012, 2, 13)), (datetime.date(2012, 2, 13), datetime.date(2012, 8, 13))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 25736
+Total number of unique unigrams in this slot 26625
+Total number of unique unigrams in this slot 27147
+Total number of unique unigrams in this slot 33496
+Total number of unique unigrams in this slot 36428
+Total number of unique unigrams in this slot 33189
+Total number of unique unigrams in this slot 32725
+Total number of unique unigrams in this slot 30459
+Total number of unique unigrams in this slot 29229
+Total number of unique unigrams in this slot 21779
+Total number of unique unigrams in this slot 8369
+Slots 11
+Total number of unique unigrams in the entire corpus 102346
+Total unigrams added to different slots 305182
+Oldest date 2007-02-07
+Youngest date 2012-04-23
+11 [(datetime.date(2007, 2, 7), datetime.date(2007, 8, 7)), (datetime.date(2007, 8, 7), datetime.date(2008, 2, 7)), (datetime.date(2008, 2, 7), datetime.date(2008, 8, 7)), (datetime.date(2008, 8, 7), datetime.date(2009, 2, 7)), (datetime.date(2009, 2, 7), datetime.date(2009, 8, 7)), (datetime.date(2009, 8, 7), datetime.date(2010, 2, 7)), (datetime.date(2010, 2, 7), datetime.date(2010, 8, 7)), (datetime.date(2010, 8, 7), datetime.date(2011, 2, 7)), (datetime.date(2011, 2, 7), datetime.date(2011, 8, 7)), (datetime.date(2011, 8, 7), datetime.date(2012, 2, 7)), (datetime.date(2012, 2, 7), datetime.date(2012, 8, 7))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 11998
+Total number of unique unigrams in this slot 23001
+Total number of unique unigrams in this slot 33693
+Total number of unique unigrams in this slot 28453
+Total number of unique unigrams in this slot 27234
+Total number of unique unigrams in this slot 27180
+Total number of unique unigrams in this slot 25126
+Total number of unique unigrams in this slot 23145
+Total number of unique unigrams in this slot 25055
+Total number of unique unigrams in this slot 13895
+Total number of unique unigrams in this slot 7503
+Slots 11
+Total number of unique unigrams in the entire corpus 85166
+Total unigrams added to different slots 246283
+Oldest date 2007-02-07
+Youngest date 2012-04-22
+11 [(datetime.date(2007, 2, 7), datetime.date(2007, 8, 7)), (datetime.date(2007, 8, 7), datetime.date(2008, 2, 7)), (datetime.date(2008, 2, 7), datetime.date(2008, 8, 7)), (datetime.date(2008, 8, 7), datetime.date(2009, 2, 7)), (datetime.date(2009, 2, 7), datetime.date(2009, 8, 7)), (datetime.date(2009, 8, 7), datetime.date(2010, 2, 7)), (datetime.date(2010, 2, 7), datetime.date(2010, 8, 7)), (datetime.date(2010, 8, 7), datetime.date(2011, 2, 7)), (datetime.date(2011, 2, 7), datetime.date(2011, 8, 7)), (datetime.date(2011, 8, 7), datetime.date(2012, 2, 7)), (datetime.date(2012, 2, 7), datetime.date(2012, 8, 7))]
+Num of slots 11 11
+Total number of unique unigrams in this slot 22299
+Total number of unique unigrams in this slot 27219
+Total number of unique unigrams in this slot 27323
+Total number of unique unigrams in this slot 28490
+Total number of unique unigrams in this slot 28065
+Total number of unique unigrams in this slot 30226
+Total number of unique unigrams in this slot 30985
+Total number of unique unigrams in this slot 23936
+Total number of unique unigrams in this slot 24208
+Total number of unique unigrams in this slot 19417
+Total number of unique unigrams in this slot 9780
+Slots 11
+Total number of unique unigrams in the entire corpus 90252
+Total unigrams added to different slots 271948

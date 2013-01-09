@@ -1,0 +1,147 @@
+postscript("Post_Thread_User.eps", horizontal=FALSE, onefile=FALSE, height=4, width=14)
+par(mfrow=c(1,2),xpd=T, mar=par()$mar+c(0,2,0,0))
+p_postsperthread<- plot(h_postsperthread$counts, log="xy", type='h', lwd="5", lend=2, col="brown2", xlab="log(No. of Posts)", ylab="log(No. of Threads)", cex.axis=1, cex.lab=1.5)
+lines(h_postsperthread$counts, log="xy",type='l', col="lightgrey", lwd=2)
+p_postsperuser<- plot(h_postsperuser$counts, log="xy", cex.axis=1, cex.lab=1.5, type='h', lwd="5", lend=2, col="cadetblue", xlab="log(No. of Posts)", ylab="log(No. of Users)")
+lines(h_postsperuser$counts, log="xy",type='l', col="lightgrey", lwd=2)
+dev.off()
+
+postscript("Activty_Timeline.eps", horizontal=FALSE, onefile=FALSE, height=4, width=14)
+par(mfrow=c(1,2),xpd=T, mar=par()$mar+c(0,2,0,0))
+h_users<- hist(ndates_users, "months", format="%Y-%m-%d", freq=TRUE, border=FALSE, ylab=" No. of Users", xlab="Date", main=NULL, cex.lab=1.5, cex.axis=1)
+polygon.freq(h_users, col="cadetblue", lwd=1.5)
+h_posts<- hist( ndates, "months", format="%Y-%m-%d", freq=TRUE, border=FALSE, ylab=" No. of Posts", xlab="Date", main=NULL, cex.lab=1.5, cex.axis=1)
+polygon.freq(h_posts,col="coral3", lwd=1.5)
+dev.off()
+
+postscript("data_characteristics.eps", horizontal=FALSE, onefile=FALSE, height=8, width=8);
+#png("data_characteristics.png")
+par(mfrow=c(2,2),xpd=T, mar=par()$mar+c(0,2,0,0));
+p_postsperthread<- plot(h_postsperthread$counts, log="xy", type='h', lwd="5", lend=2, col="lightgrey", xlab="log(No. of Posts)", ylab="log(No. of Threads)", cex.axis=1, cex.lab=1.5, main="a)");
+lines(h_postsperthread$counts, log="xy",type='l', col="black", lwd=2);
+p_postsperuser<- plot(h_postsperuser$counts, log="xy", cex.axis=1, cex.lab=1.5, type='h', lwd="5", lend=2, col="lightgrey", xlab="log(No. of Posts)", ylab="log(No. of Users)", main="b)");
+lines(h_postsperuser$counts, log="xy",type='l', col="black", lwd=2);
+h_users<- hist(ndates_users, "months", format="%Y-%m-%d", freq=TRUE, border="white", ylab=" No. of Users", xlab="Date", main="c)", cex.lab=1.5, cex.axis=1);
+lines(h_users, col="cadetblue", lwd=1.5, border="white");
+h_posts<- hist( ndates, "months", format="%Y-%m-%d", freq=TRUE, border="white", ylab=" No. of Posts", xlab="Date", main="d)", cex.lab=1.5, cex.axis=1);
+lines(h_posts,col="coral3", lwd=1.5, border="white");
+dev.off();
+
+postscript("PostTopic.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(0,2,0,0));
+barplot(ttp$posts,beside=TRUE,col="darkblue", names.arg=c("0","1","2","3","4","5","6","7","8","9"), ylab="No. of Posts", xlab="Topics", ylim=c(0,250000),cex.axis=1.5, cex.lab=2,main="a)");
+dev.off()
+postscript("UserTopic.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(0,2,0,0));
+barplot(ttp$users,beside=TRUE,col="darkblue", names.arg=c("0","1","2","3","4","5","6","7","8","9"), ylab="No. of Users", xlab="Topics", ylim=c(0,15000),cex.axis=1.5, cex.lab=2,main="b)");
+dev.off()
+
+postscript("PostTopic.eps", horizontal=FALSE, onefile=FALSE)
+par(xpd=T, mar=par()$mar+c(0,2,0,0))
+p_ttpu_1 <- plot( ttpu$posts, cex.axis=1, cex.lab=1.5, type="o", col= "darkred", xlab="Topics", ylab=" No. of Posts ", xaxt="n", main="a)")
+axis(1:10,at=1:10,labels=0:9, cex.axis=1)
+dev.off()
+postscript("UserTopic.eps", horizontal=FALSE, onefile=FALSE)
+par(xpd=T, mar=par()$mar+c(0,2,0,0))
+p_ttpu_2 <- plot( ttpu$users, cex.axis=1, cex.lab=1.5, type="o", col= "cadetblue4", xlab="Topics", ylab=" No. of Users ", xaxt="n", main="b)")
+axis(1:10,at=1:10,labels=0:9, cex.axis=1)
+dev.off()
+
+postscript("Topic_Histograms1.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(0,2,0,0));
+h_t0_1<-hist(ndates0,"months", format="%Y-%m-%d",freq=TRUE, col="darkred",border="white", main="a)", ylab="No. of Posts", xlab="Date", cex.axis=1, ylim=c(0,15000), lwd=1, cex.lab=1.5)
+axis(2, col="black", labels=F)
+dev.off();
+postscript("Topic_Histograms2.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(0,2,0,0));
+h_t3_1<-hist(ndates3,"months", format="%Y-%m-%d",freq=TRUE, col="cadetblue",border="white", main="b)", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1, cex.lab=1.5, cex.axis=1)
+axis(2, col="black", labels=F)
+dev.off();
+postscript("Topic_Histograms3.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(0,2,0,0));
+h_t8_1<-hist(ndates8,"months", format="%Y-%m-%d",freq=TRUE, col="cadetblue",border="white", main="c)", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1, cex.lab=1.5, cex.axis=1)
+axis(2, col="black", labels=F)
+dev.off();
+postscript("Topic_Histograms4.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(0,2,0,0));
+h_t9_1<-hist(ndates9,"months", format="%Y-%m-%d",freq=TRUE, col="darkred",border="white", main="d)", ylab="No. of Posts", xlab="Date", ylim=c(0,15000), lwd=1, cex.lab=1.5, cex.axis=1 , par("usr")[3], srt=45);
+axis(2, col="black", labels=F)
+dev.off()
+
+topics<-read.table("AvgTopicStrength1.txt",header=TRUE);
+dates<-c("2007-02-06","2007-08-06","2008-02-06","2008-08-06","2009-02-06","2009-08-06","2010-02-06","2010-08-06","2011-02-06","2011-08-06","2012-02-06");
+plot_colors<-c("darkred","brown3","coral4","darkolivegreen4","coral3","darkcyan","darkblue","azure4","cyan3","darkorange3");
+max_y<-max(topics);
+postscript("TopicStrengths1.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(4,2,0,8));
+plot(topics$topic2, type="o",pch=23, lty=3,cex.lab=2,cex.axis=1.5, col=plot_colors[3], ylim=c(0,max_y), xlab="",ylab="Topic Strength", xaxt="n", main="a)");
+axis(1,at=1:11,labels=F);
+text(1:11, par("usr")[3], srt=45, adj=c(1.1, 1.1),labels=dates,xpd=T, cex=1.5);
+lines(topics$topic0, type="o", col=plot_colors[1])
+lines(topics$topic1, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+lines(topics$topic4, type="o",pch=25, lty=1, col=plot_colors[5]);
+lines(topics$topic9, type="o", pch=21, lty=2, col=plot_colors[10]);
+legend(12, max_y, paste("topic",c(0,1,2,4,9),""), cex=1.5, col=c(plot_colors[1],plot_colors[2],plot_colors[3],plot_colors[5],plot_colors[10]), pch=c(21,22,23,25,21), lty=c(1,2,3,1,2),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1);
+dev.off();
+postscript("TopicStrengths2.eps", horizontal=FALSE, onefile=FALSE, height=6, width=6);
+par(xpd=T, mar=par()$mar+c(4,2,0,8));
+plot(topics$topic3, type="o",pch=24, lty=4, cex.lab=2,cex.axis=1.5,col=plot_colors[4], lwd=1.5, ylim=c(0,max_y), xlab="",ylab="Topic Strength", xaxt="n", main="b)");
+axis(1,at=1:11, labels=F);
+text(1:11, par("usr")[3], srt=45, adj=c(1.1, 1.1),labels=dates,xpd=T, cex=1.5);
+lines(topics$topic7, type="o", pch=23, lty=4, col=plot_colors[8], lwd=1.5);
+lines(topics$topic5, type="o", lty=2, col=plot_colors[6]);
+lines(topics$topic6, type="o", pch=22, lty=3, col=plot_colors[7], lwd=1.5);
+lines(topics$topic8, type="o", pch=24, lty=1, col=plot_colors[9]);
+legend(12, max_y, paste("topic",c(3,5,6,7,8),""), cex=1.5, col=c(plot_colors[4],plot_colors[6],plot_colors[7],plot_colors[8],plot_colors[9]), pch=c(24,21,22,23,24), lty=c(4,2,3,4,1),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1);
+dev.off();
+
+
+postscript("SubTopicStrengths.eps", horizontal=TRUE, onefile=FALSE, height=20, width=40);
+par(mfrow=c(2,2), xpd=T, mar=par()$mar+c(4,2,0,8));
+subtopics8<-read.table("AvgTopicStrengthtopic8.txt",header=TRUE);
+max_y<-max(subtopics8);
+plot(subtopics8$topic2,type="o",pch=25, lty=1, col=plot_colors[1], ylim=c(0,max_y), xlab="",ylab="Topic Strength", xaxt="n", cex.lab=2, cex.axis=1.5,main="a)");
+axis(1,at=1:11,labels=F);
+text(1:11, par("usr")[3], srt=45, adj=c(1.1, 1.1),labels=dates,xpd=T, cex=1.5);
+lines(subtopics8$topic3, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+lines(subtopics8$topic4, type="o", pch=21, lty=3, col=plot_colors[3]);
+legend(12, max_y, paste("topic",c(2,3,4),""), cex=1.5, col=c(plot_colors[1],plot_colors[2], plot_colors[3]), pch=c(25,22,21), lty=c(1,2,3),bty="n");
+plot(subtopics8$topic0, type="o",pch=23, lty=3, col=plot_colors[6], ylim=c(0,max_y), xlab="",ylab="Topic Strength", xaxt="n", cex.lab=2, cex.axis=1.5, main="b)");
+axis(1,at=1:11,labels=F);
+text(1:11, par("usr")[3], srt=45, adj=c(1.1, 1.1),labels=dates,xpd=T, cex=1.5);
+lines(subtopics8$topic1, type="o", col=plot_colors[9]);
+legend(12, max_y, paste("topic",c(0,1),""), cex=1.5, col=c(plot_colors[6],plot_colors[9]), pch=c(23,21), lty=c(3,1),bty="n");
+subtopics9<-read.table("AvgTopicStrengthtopic9.txt",header=TRUE);
+max_y<-max(subtopics9);
+plot(subtopics9$topic4, type="o",pch=25, lty=3, col=plot_colors[3], ylim=c(0,max_y), xlab="",ylab="Topic Strength", xaxt="n", cex.lab=2, cex.axis=1.5, main="c)");
+axis(1,at=1:11,labels=F);
+text(1:11, par("usr")[3], srt=45, adj=c(1.1, 1.1),labels=dates,xpd=T, cex=1.5);
+lines(subtopics9$topic3, type="o",pch=22, lty=2, col=plot_colors[2], lwd=1.5);
+legend(12, max_y, paste("topic",c(3,4),""), cex=1.5, col=c(plot_colors[3], plot_colors[2]), pch=c(25,22), lty=c(3,2),bty="n");
+plot(subtopics9$topic0, type="o",pch=23, lty=3, col=plot_colors[6], ylim=c(0,max_y), xlab="",ylab="Topic Strength", xaxt="n", cex.lab=2, cex.axis=1.5, main="d)");
+axis(1,at=1:11,labels=F);
+text(1:11, par("usr")[3], srt=45, adj=c(1.1, 1.1),labels=dates,xpd=T, cex=1.5);
+lines(subtopics9$topic1, type="o", col=plot_colors[9])
+lines(subtopics9$topic2, type="o", pch=22, lty=2, col=plot_colors[7]);
+legend(12, max_y, paste("topic",c(0,1,2),""), cex=1.5, col=c(plot_colors[6],plot_colors[9], plot_colors[7]), pch=c(23,21,22), lty=c(3,1,2),bty="n");
+par(mar=c(5, 4, 4, 2) + 0.1)
+dev.off();
+
+heatmap
+
+postscript("Topic_Community.eps", horizontal=TRUE, onefile=FALSE)
+#png("Topic_Community.png");
+ct <- read.csv("/media/netdisk/ansuya/cafemomwork/R/community_topics.csv",sep=",");
+ct <- ct[order(ct$communities),];
+row.names(ct)<- ct$communities;
+ct<- ct[,2:11];
+ct_matrix <- data.matrix(ct);
+ct_heatmap<- heatmap(ct_matrix, Rowv=NA, Colv=NA, col=heat.colors(256), scale="row", margins=c(8,5));
+dev.off()
+
+
+
+
+

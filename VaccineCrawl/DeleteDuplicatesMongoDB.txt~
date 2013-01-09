@@ -1,0 +1,42 @@
+In order to delete duplicate records from your database on MongoDB, there are two approaches available-
+1. To delete records from a small sized collection
+2. To delete records from a fairly large sized collection
+
+Javascript code for both cases is given below. This code can be directly run on the mongodb shell. 
+
+As an example, for the code below I am using the collections called "mycoll" and the key for removing duplicates is the "myId".
+
+In case 1:
+
+The approach is to delete duplicates by indexing the collection. 
+For large sized collections- This may not work and can be extremely slow. 
+It may also make you lose your data; so before running the code, backing up data is recommended. 
+
+> db.mycoll.ensureIndex( { myId : 1 }, { "unique" : true, "dropDups" : true });
+
+Incase you want to only index a collection on a unique key, then simply use
+>db.mycoll.ensureIndex { myId : 1 }, { "unique" : true });
+
+In case 2:
+
+The approach is to use MapReduce functions to group data and then remove data having multiple counts. 
+This is defintiely a better and faster solution no matter what the size of your collection may be. 
+For more information on how to implement MapReduce visit http://www.mongodb.org/display/DOCS/MapReduce
+
+> m=function () {
+...    emit(this.myId, 1);
+...}
+> r=function (k, vals) {
+...    return Array.sum(vals);
+...}
+> res=db.mycoll.mapReduce(m,r,{ out : "myoutput" });
+
+> db.myoutput.find({value: {$gt :1}}).forEach(
+... function(obj){                                                     
+... var cur=db.mycoll.find({userId : obj._id},{_id:1});
+... var first=true;
+... while(cur.hasNext()){
+... var doc=cur.next();
+... if(first) {first =false; continue;}
+... db.users.remove({_id : doc._id }); 
+... }})
